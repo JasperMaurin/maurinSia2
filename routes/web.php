@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TransactionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/customers', [TransactionController::class, 'getCustomers']);
+Route::get('/cars', [TransactionController::class, 'getCars']);
 
 Route::get('/', function () {
     return view('welcome');
