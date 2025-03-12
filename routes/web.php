@@ -15,6 +15,8 @@ use App\Http\Controllers\TransactionController;
 */
 Route::get('/customers', [TransactionController::class, 'getCustomers']);
 Route::get('/cars', [TransactionController::class, 'getCars']);
+Route::get('/reservation', [TransactionController::class, 'getReservation']);
+Route::get('/service', [TransactionController::class, 'getService']);
 
 Route::get('/', function () {
     return view('welcome');
